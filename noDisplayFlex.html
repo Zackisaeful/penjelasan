@@ -1,0 +1,74 @@
+<!-- kesimpulan untuk dapat menggunakna property css justify-content dan align-items harus menggunakan display flex karena itu merupakan teknik flexbok-->
+
+<!-- Secara default ketika menggunakn display flex justify-conten digunakan untuk mengatur element di dalamnya secara horizontal dan align-items secara vertikal ketika menggunakna display flex dengan flex-direction column, justify-content akan mengatur dari vertikal dan align-items secara horizontal  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        background-color: salmon;
+        border: 1px solid black;
+        height: 300px;
+        width: 300px;
+        display: flex; /* tidak dapat menggunakan justify-content align-items tanapa display flex karena itu satu faket teknik css yaitu flex box  */
+        justify-content: center; /* mengatur ketengah secara horizontal */
+        align-items: center;   /* mengatur ketengah secara horizontal */
+        flex-direction: column;
+      }
+/* ketika menggunakan display flex element yang tadinya secara default berjajar dari atas kebawah menjadi dari kiri kekanan, menggunakan display flex dengan tujuan ingin dapat menggunakan justify-content dan alifgn items */
+
+/* yang pengguna inginkan adalah posisi element di tengah berarti yang di perlukan adalah justify-content center dengan align-item center, tetapi dengan posisi tetap berjajar dari atas kebawah, dengan mengguanakan display flex dengan bersamaan flex-direction: column; element akan berjajar kembali dari atas kebawah, dan dapat menggunakan justify-content center align-items center.*/
+
+
+/* tetapi ada perubahan dari efek tersebut yant tadinya justify-content untuk mengatur posisi element dengan horizontal menjadi vertikal bergitu juga sebaliknya yang terjadi pada fungsi property align-items */
+
+
+/* Metode ini cocok jika suatu pembungkus memilki banyak element didalamnya yang harus diatur secara otomatis */
+
+
+      .content {
+        background-color: aqua;
+        border: 1px solid black;
+        height: 80px;
+        width: 80px;
+      }
+      
+      .container2 {
+        background-color: salmon;
+        border: 1px solid black;
+        height: 300px;
+        width: 300px;
+      }
+      
+      .content2 {
+        background-color: aqua;
+        border: 1px solid black;
+        height: 80px;
+        width: 80px;
+        margin: auto ; /* margin auto hanya memindahkan posisi element ketengah secara horizontal */
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content"></div>
+    </div>
+  
+    <div class="container2">
+      <div class="content2"></div>
+    </div>
+  
+
+
+</body>
+
+
+</html>
